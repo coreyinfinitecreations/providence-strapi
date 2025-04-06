@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mobile_clinics",
+  "info": {
+    "singularName": "mobile-clinic",
+    "pluralName": "mobile-clinics",
+    "displayName": "Mobile Clinics",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Venue": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Date": {
+      "type": "date",
+      "required": true
+    },
+    "StartTime": {
+      "type": "time",
+      "required": true,
+      "default": "08:00:00.000"
+    },
+    "EndTime": {
+      "type": "time",
+      "required": false
+    },
+    "locationDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location-details.location-details"
+    }
+  }
+}
